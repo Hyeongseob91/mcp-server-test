@@ -1,12 +1,18 @@
 # Smithery configuration
 
 startCommand:
-  type: stdio
-  configSchema:
-    type: object
-    required:
-      - test_string
-    properties:
-      apiSecretKey:
-        type: string
-        description: "API secret key for GPTers search service"
+  type: http
+  commandFunction: "python mcp_server.py"
+  lazyLoading: true
+
+configSchema:
+  type: object
+  properties:
+    apiSecretKey:
+      type: string
+      description: "API secret key for GPTers search service"
+    test_string:
+      type: string
+      description: "Test string parameter"
+  required:
+    - test_string
