@@ -10,4 +10,4 @@ def test_operation(num: int):
 
 if __name__ == "__main__":
     print("Starting MCP server...", file=sys.stderr)
-    mcp.run(transport="sse")
+    mcp.run()
