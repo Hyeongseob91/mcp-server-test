@@ -1,0 +1,12 @@
+# Smithery configuration
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - test_string
+    properties:
+      apiSecretKey:
+        type: string
+        description: "API secret key for GPTers search service"
